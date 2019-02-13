@@ -1,0 +1,7 @@
+1、安装dotNetFx45_Full_x86_x64.exe ,net Framework 4.5以上
+2、安装Windows6.1-KB2819745-x64-MultiPkg.msu
+
+3、配置winrm 在cmd中执行powershell-winrm.bat脚本
+
+4、若powershell不能执行.ps1脚本则设置策略为 remotesigned 执行命令set-ExecutionPolicy RemoteSigned 
+查看当前策略get-executionpolicy
