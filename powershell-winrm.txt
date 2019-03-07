@@ -1,0 +1,11 @@
+powershell get-host
+powershell set-ExecutionPolicy RemoteSigned
+echo y|winrm quickconfig
+set-item wsman:\localhost\listener\listener*\port 6998 
+winrm e winrm/config/listener
+winrm set winrm/config/service/auth @{Basic="true"}
+winrm set winrm/config/service @{AllowUnencrypted="true"}
+
+配置https连接方式
+ls Cert:\LocalMachine\My\
+winrm create winrm/config/Listener?Address=*+Transport=HTTPS @{Port="6998" ;Hostname="WMSvc-lebangServer" ;CertificateThumbprint=""}
