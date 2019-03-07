@@ -8,7 +8,7 @@
 4、若powershell不能执行.ps1脚本则设置策略为 remotesigned 执行命令set-ExecutionPolicy RemoteSigned 
 查看当前策略get-executionpolicy
 5、修改网络设置，将网络模式改为专用网络
-6、添加防火墙规则，添加入站规则==》端口==》5985
+6、添加防火墙规则，添加入站规则==》端口==》5985（云平台需要修改端口，使用SSL证书方式连接）
 
 7、##2008版本特定步骤，系统可能未自带Microsoft Visual C++ 2008 Redistributable Package包，执行vcredist_x64.exe安装程序
 
